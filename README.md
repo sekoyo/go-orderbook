@@ -7,6 +7,8 @@ A fast (4m TPS) orderbook in Go.
 - Market orders
 - Limit orders (GTC)
 - Add, Cancel, Amend (quantity)
+- Best price and depth of each side
+- Last filled price
 
 ### Todo
 
