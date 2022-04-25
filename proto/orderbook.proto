@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option go_package = "github.com/lightfin-io/orderbook";
+
+package orderbook;
+
+service Orderbook {
+  rpc AddOrder (AddOrderRequest) returns (AddOrderReply) {}
+  rpc CancelOrder (CancelOrderRequest) returns (CancelOrderReply) {}
+  rpc AmendOrder (AmendOrderRequest) returns (AmendOrderReply) {}
+}
+
+message AddOrderRequest {
+  uint64 order_id = 1;
+  uint64 price = 2;
+  uint64 qty = 3;
+  bool is_bid = 4;
+}
+message AddOrderReply {
+  string error = 1;
+}
+
+message CancelOrderRequest {
+  uint64 order_id = 1;
+}
+message CancelOrderReply {
+  string error = 1;
+}
+
+message AmendOrderRequest {
+  uint64 order_id = 1;
+  uint64 qty = 2;
+}
+message AmendOrderReply {
+  string error = 1;
+}
