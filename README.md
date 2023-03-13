@@ -1,6 +1,6 @@
 # Go Orderbook
 
-A fast (4m TPS) orderbook in Go.
+A fast orderbook in Go.
 
 ### Features
 
